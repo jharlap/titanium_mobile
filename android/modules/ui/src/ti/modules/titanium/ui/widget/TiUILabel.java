@@ -81,11 +81,9 @@ public class TiUILabel extends TiUIView
 				tv.setEllipsize(null);
 			}
 		}
-		
 		if (d.containsKey(TiC.PROPERTY_MAX_LINES)) {
 			tv.setMaxLines(TiConvert.toInt(d, TiC.PROPERTY_MAX_LINES));
 		}
-		
 		if (d.containsKey(TiC.PROPERTY_WORD_WRAP)) {
 			tv.setSingleLine(!TiConvert.toBoolean(d, TiC.PROPERTY_WORD_WRAP));
 		}
