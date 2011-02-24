@@ -179,7 +179,7 @@ public class TabGroupProxy extends TiWindowProxy
 			TabSpec tspec = tg.newTab(tag);
 			if (tView != null){
 				tspec.setIndicator(tView.getView(null).getNativeView());
-			}else if (icon == null) {
+			} else if (icon == null) {
 				tspec.setIndicator(title);
 			} else {
 				String path = getTiContext().resolveUrl(null, icon);
