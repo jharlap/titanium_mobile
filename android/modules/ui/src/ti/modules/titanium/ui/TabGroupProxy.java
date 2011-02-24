@@ -278,11 +278,11 @@ public class TabGroupProxy extends TiWindowProxy
 			}
 		}
 		tg.changeActiveTab(initialActiveTab);
-
+		
 		if (hasProperty("titleControl")){
 			((TiTabActivity)activity).setTitleControl((ViewProxy) getProperty("titleControl"));
 		}
-
+		
 		opened = true;
 		fireEvent(TiC.EVENT_OPEN, null);
 	}

@@ -96,7 +96,7 @@ public class TiTabActivity extends ActivityGroup
 
 		if(titleControl){
 			this.requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
-		}else if (navbar) {
+		} else if (navbar) {
 			this.requestWindowFeature(Window.FEATURE_LEFT_ICON); // TODO Keep?
 			this.requestWindowFeature(Window.FEATURE_RIGHT_ICON);
 			this.requestWindowFeature(Window.FEATURE_PROGRESS);
@@ -148,7 +148,7 @@ public class TiTabActivity extends ActivityGroup
 		return layout;
 	} 
 	
-    public void setTitleControl(ViewProxy v){
+	public void setTitleControl(ViewProxy v){
 		try{
 			int titleContainerId = (Integer) Class.forName("com.android.internal.R$id").getField("title_container").get(null);
 			((ViewGroup) getWindow().findViewById(titleContainerId)).removeAllViews();
