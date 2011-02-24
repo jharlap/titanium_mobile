@@ -463,7 +463,7 @@ public class TiHTTPClient
 			HttpProtocolParams.setUseExpectContinue(params, false);
 			HttpProtocolParams.setVersion(params, HttpVersion.HTTP_1_1);
             
-   			// Mobile Proxy handling			
+			// Mobile Proxy handling
 			Activity act = proxy.getTiContext().getActivity();
 			
 			String proxyHost = Proxy.getHost(act);
