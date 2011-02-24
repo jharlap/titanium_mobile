@@ -149,13 +149,13 @@ public class TiTabActivity extends ActivityGroup
 	} 
 	
 	public void setTitleControl(ViewProxy v){
-		try{
+		try {
 			int titleContainerId = (Integer) Class.forName("com.android.internal.R$id").getField("title_container").get(null);
 			((ViewGroup) getWindow().findViewById(titleContainerId)).removeAllViews();
 			((ViewGroup) getWindow().findViewById(titleContainerId)).setPadding(0, 0, 0, 0);
 			((ViewGroup) getWindow().findViewById(titleContainerId)).setBackgroundResource(android.R.color.transparent);
 			((ViewGroup) getWindow().findViewById(titleContainerId)).addView(v.getView(this).getNativeView());
-		}catch(Exception ex){
+		} catch(Exception ex){
 				Log.d(LCAT, "couldn't set titleControl on tabGroup ", ex);
 		}
 	}
