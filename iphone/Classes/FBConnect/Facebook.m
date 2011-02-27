@@ -211,7 +211,7 @@ static NSString* kSDKVersion = @"ios";
 
   _sessionDelegate = delegate;
 
-  [self authorizeWithFBAppAuth:YES safariAuth:YES];
+  [self authorizeWithFBAppAuth:YES safariAuth:NO];
 }
 
 /**
@@ -257,7 +257,7 @@ static NSString* kSDKVersion = @"ios";
     // If the error response indicates that we should try again using Safari, open
     // the authorization dialog in Safari.
     if (errorReason && [errorReason isEqualToString:@"service_disabled_use_browser"]) {
-      [self authorizeWithFBAppAuth:NO safariAuth:YES];
+      [self authorizeWithFBAppAuth:NO safariAuth:NO];
       return YES;
     }
 
