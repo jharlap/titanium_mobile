@@ -463,7 +463,6 @@ Titanium.Geolocation.forwardGeocoder(addr,function(evt)
 	});
 });
 
-
 if (Titanium.Platform.name == 'android')
 {
 	//  as the destroy handler will remove the listener, only set the pause handler to remove if you need battery savings
