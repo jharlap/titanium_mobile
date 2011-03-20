@@ -67,7 +67,7 @@ public class TiUIWindow extends TiUIView
 		TiC.PROPERTY_MODAL, TiC.PROPERTY_WINDOW_SOFT_INPUT_MODE, "titleControl"
 	};
 	private static final String WINDOW_ID_PREFIX = "window$";
-		
+	
 	protected String activityKey;
 	protected Activity windowActivity;
 	protected TiContext windowContext;
@@ -371,7 +371,7 @@ public class TiUIWindow extends TiUIView
 		return v;
 	}
 	
-    protected void setTitleControl(ViewProxy v){
+	protected void setTitleControl(ViewProxy v){
 		try{
 			int titleContainerId = (Integer) Class.forName("com.android.internal.R$id").getField("title_container").get(null);
 			((ViewGroup) windowActivity.getWindow().findViewById(titleContainerId)).removeAllViews();
@@ -450,7 +450,7 @@ public class TiUIWindow extends TiUIView
 		}
 		if (d.containsKey("titleControl")){
 			setTitleControl((ViewProxy) d.get("titleControl"));
-		}else if (d.containsKey(TiC.PROPERTY_TITLE)) {
+		} else if (d.containsKey(TiC.PROPERTY_TITLE)) {
 			String title = TiConvert.toString(d, TiC.PROPERTY_TITLE);
 			if (windowActivity != null) {
 				windowActivity.setTitle(title);

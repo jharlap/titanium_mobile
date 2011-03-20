@@ -244,7 +244,7 @@ public abstract class TiBaseActivity extends Activity
 		if (customTitle){
 			setFullscreen(fullscreen);
 			setCustomTitle();
-		}else if (!modal) {
+		} else if (!modal) {
 			setFullscreen(fullscreen);
 			setNavBarHidden(navBarHidden);
 		} else {
