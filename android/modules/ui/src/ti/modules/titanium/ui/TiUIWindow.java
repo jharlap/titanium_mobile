@@ -371,14 +371,14 @@ public class TiUIWindow extends TiUIView
 		return v;
 	}
 	
-	protected void setTitleControl(ViewProxy v){
-		try{
+	protected void setTitleControl(ViewProxy v) {
+		try {
 			int titleContainerId = (Integer) Class.forName("com.android.internal.R$id").getField("title_container").get(null);
 			((ViewGroup) windowActivity.getWindow().findViewById(titleContainerId)).removeAllViews();
 			((ViewGroup) windowActivity.getWindow().findViewById(titleContainerId)).setPadding(0, 0, 0, 0);
 			((ViewGroup) windowActivity.getWindow().findViewById(titleContainerId)).setBackgroundResource(android.R.color.transparent);
 			((ViewGroup) windowActivity.getWindow().findViewById(titleContainerId)).addView(v.getView(windowActivity).getNativeView());
-		}catch(Exception ex){
+		} catch(Exception ex) {
 				Log.e(LCAT, "couldn't set titleControl on Window ", ex);
 		}
 	}
