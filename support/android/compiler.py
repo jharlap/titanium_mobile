@@ -195,7 +195,10 @@ class Compiler(object):
 		def jspack(c): return jspacker.jsmin(c)
 		def csspack(c): return CSSPacker(c).pack()
 		
-		packers = {'js': jspack, 'css': csspack }
+		packers = {
+			#'js': jspack, 
+			'css': csspack
+		}
 		if ext in packers:
 			file_contents = packers[ext](file_contents)
 			of = codecs.open(path,'w',encoding='utf-8')
