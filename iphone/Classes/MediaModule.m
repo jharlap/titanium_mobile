@@ -605,7 +605,7 @@ if (![TiUtils isIOS4OrGreater]) { \
 
 -(BOOL)isCameraFlashSupported;
 {
-	ONLY_IN_IOS4_OR_GREATER(camera,nil)
+	ONLY_IN_IOS4_OR_GREATER(camera,NO)
 	
 	if (picker!=nil)
 	{
